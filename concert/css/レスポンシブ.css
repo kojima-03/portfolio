@@ -1,0 +1,906 @@
+/* ------------------------------------------- */
+/* ==================================================
+   レスポンシブ対応
+   ================================================== */
+
+
+/* ==================================================
+   タブレット
+   1024px以下
+   ================================================== */
+
+@media (max-width: 1024px) {
+
+    /* ------------------------------------------
+       コンテナ
+       ------------------------------------------ */
+
+    .container {
+        width: 94%;
+        padding: 120px 30px 0;
+        margin: 30px auto;
+    }
+    /* ------------------------------------------
+       ヘッダー
+       ----------------------------------------- */
+    header {
+        top: 30px;
+        width: 94%;
+        max-width: none;
+        height: 80px;
+
+        padding-inline: 25px;
+    }
+    #logo {
+        max-width: 150px;
+        height: auto;
+    }
+    /* ------------------------------------------
+       ナビゲーション
+       ------------------------------------------ */
+    nav {
+        gap: 20px;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    nav p a {
+        padding: 9px 15px;
+    }
+    /* ------------------------------------------
+       メインビジュアル
+       ------------------------------------------ */
+    .main-visual {
+        height: 55vw;
+        min-height: 400px;
+        max-height: 650px;
+
+        background-size: cover;
+    }
+    /* ------------------------------------------
+       About
+       ------------------------------------------ */
+    #about {
+        width: 100%;
+    }
+    .about-phot {
+        gap: 30px;
+    }
+    .about-phot > div {
+        flex: 1;
+    }
+    /* ------------------------------------------
+       コンサート
+       ------------------------------------------ */
+    .concert-info {
+        gap: 30px;
+    }
+    .concert-info > .datetime,
+    .concert-info > .map {
+        width: 50%;
+    }
+    .map iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+    /* ------------------------------------------
+       ワークショップ
+       ------------------------------------------ */
+    #workshop h3 {
+        margin-bottom: 80px;
+    }
+    .workshop-list {
+        gap: 20px;
+    }
+    .workshop-item {
+        flex: 1;
+    }
+    /* ------------------------------------------
+       募集要項
+       ------------------------------------------ */
+
+    .price-list {
+        gap: 15px;
+    }
+    .price-item {
+        flex: 1;
+    }
+    /* ------------------------------------------
+       セクションライン
+       ------------------------------------------ */
+    .section-line {
+        margin-left: 0;
+        text-align: center;
+    }
+    .section-line img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* ==================================================
+   スマートフォン
+   600px以下
+   ================================================== */
+@media (max-width: 600px) {
+    /* ------------------------------------------
+       基本設定
+       ------------------------------------------ */
+    html {
+        font-size: 100%;
+    }
+    body {
+        padding: 0;
+        background-attachment: scroll;
+    }
+    /* ------------------------------------------
+       コンテナ
+       ------------------------------------------ */
+    .container {
+        width: calc(100% - 20px);
+        max-width: none;
+        margin: 20px auto;
+        padding: 220px 15px 0;
+        background-color: rgba(255, 255, 255, 0.72);
+    }
+    /* ------------------------------------------
+       ヘッダー
+       ------------------------------------------ */
+
+    header {
+        top: 10px;
+
+        width: calc(100% - 20px);
+        max-width: none;
+
+        height: auto;
+        min-height: 0;
+
+        padding: 12px 15px 0;
+
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        box-sizing: border-box;
+    }
+    /* ------------------------------------------
+       ロゴ
+       ------------------------------------------ */
+    header h1 {
+        margin: 0;
+        text-align: center;
+    }
+    #logo {
+        display: block;
+        width: auto;
+        max-width: 150px;
+        max-height: 65px;
+        margin: 0 auto;
+    }
+    /* ------------------------------------------
+       スマホ用ナビゲーション
+       
+       現在のHTMLを変更しないため、
+       ハンバーガーではなく縦方向に配置
+       ------------------------------------------ */
+    nav {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+    nav ul {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 6px;
+
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 7px 4px;
+
+        font-size: 0.78rem;
+        line-height: 1.4;
+
+        white-space: normal;
+    }
+    /* ------------------------------------------
+       参加申し込みボタン
+       ----------------------------------------- */
+    nav p {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    nav p a {
+        display: block;
+
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 10px 15px;
+
+        font-size: 0.9rem;
+    }
+    /* ------------------------------------------
+       メインビジュアル
+       ------------------------------------------ */
+    .main-visual {
+        width: 100%;
+
+        height: 65vw;
+        min-height: 230px;
+        max-height: none;
+
+        margin-top: 0;
+
+        background-size: cover;
+        background-position: center center;
+    }
+    /* ------------------------------------------
+       共通見出し
+       ------------------------------------------ */
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    p {
+        line-height: 1.8;
+    }
+    /* ------------------------------------------
+       About
+       ------------------------------------------ */
+    #about {
+        width: 100%;
+    }
+    .about-phot {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+    .about-phot > div {
+        width: 100%;
+    }
+    .about-phot p {
+        font-size: 0.9rem;
+    }
+    /* ------------------------------------------
+       セクション間のライン
+       ----------------------------------------- */
+    .section-line {
+        width: 100%;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .section-line img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    /* ------------------------------------------
+       コンサート
+       ------------------------------------------ */
+    #concert {
+        width: 100%;
+    }
+    #concert h4 {
+        text-align: center;
+    }
+    .concert-info {
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+    }
+    .concert-info > .datetime,
+    .concert-info > .map {
+        width: 100%;
+    }
+    /* ------------------------------------------
+       コンサート日時
+       ------------------------------------------ */
+    .datetime {
+        width: 100%;
+    }
+    .time {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .datetime p {
+        font-size: 0.95rem;
+    }
+    /* ------------------------------------------
+       Google Map
+       ------------------------------------------ */
+    .map {
+        width: 100%;
+    }
+    .map iframe {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+        height: 280px;
+    }
+    /* ------------------------------------------
+       コンサート詳細ボタン
+       ------------------------------------------ */
+    .concert-application {
+        padding-top: 10px;
+    }
+    .concert-application a {
+        display: inline-block;
+
+        padding: 10px 18px;
+
+        font-size: 0.9rem;
+    }
+    /* ------------------------------------------
+       ワークショップ
+       ------------------------------------------ */
+    #workshop {
+        width: 100%;
+    }
+    #workshop h3 {
+        margin-bottom: 40px;
+    }
+    .workshop-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .workshop-item {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        border: 1px solid rgba(41, 106, 101, 0.15);
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.45);
+        text-align: center;
+    }
+    .workshop-item h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .workshop-item p {
+        margin: 5px 0;
+    }
+    /* ------------------------------------------
+       ワークショップ会場・講師
+       ------------------------------------------ */
+    #workshop > p {
+        font-size: 0.9rem;
+    }
+    /* ------------------------------------------
+       募集要項
+       ------------------------------------------ */
+    #guideline {
+        width: 100%;
+    }
+    .guideline-box {
+        width: 100%;
+    }
+    .guideline-item {
+        width: 100%;
+    }
+    /* ------------------------------------------
+       定員
+       ------------------------------------------ */
+    .capacity {
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+    .capacity-label,
+    .capacity-unit {
+        font-size: 0.85rem;
+    }
+    .capacity-number {
+        font-size: 2rem;
+    }
+    /* ------------------------------------------
+       募集条件
+       ------------------------------------------ */
+
+    .capacity-note {
+        font-size: 0.9rem;
+    }
+
+    .capacity-note p {
+        margin-bottom: 15px;
+    }
+
+
+    /* ------------------------------------------
+       参加費
+       ------------------------------------------ */
+
+    .detail {
+        width: 100%;
+    }
+
+    .price-list {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .price-item {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 12px 15px;
+
+        box-sizing: border-box;
+
+        border-radius: 8px;
+
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .price-item p {
+        margin: 0;
+
+        font-size: 0.9rem;
+    }
+
+
+    /* ------------------------------------------
+       お問い合わせ
+       ------------------------------------------ */
+
+    #contact {
+        width: 100%;
+    }
+
+    .contact-inner {
+        width: 100%;
+    }
+
+    .contact-lead {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+
+    /* ------------------------------------------
+       お問い合わせフォーム
+       ------------------------------------------ */
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-item label {
+        display: block;
+
+        margin-bottom: 7px;
+
+        font-size: 0.9rem;
+        font-weight: var(--Portfolio-Bold);
+    }
+
+    .form-item input,
+    .form-item textarea {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 12px;
+
+        border: 1px solid #ddd;
+        border-radius: 6px;
+
+        font-family: inherit;
+        font-size: 1rem;
+    }
+
+    .form-item textarea {
+        min-height: 180px;
+
+        resize: vertical;
+    }
+
+
+    /* ------------------------------------------
+       送信ボタン
+       ------------------------------------------ */
+
+    .form-submit {
+        width: 100%;
+    }
+
+    .form-submit button {
+        display: block;
+
+        width: 100%;
+
+        padding: 13px 20px;
+
+        border: none;
+        border-radius: 6px;
+
+        background-color: var(--Portfolio-Green);
+        color: var(--Portfolio-White);
+
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: var(--Portfolio-Bold);
+
+        cursor: pointer;
+    }
+}
+
+
+
+/* ==================================================
+   小さいスマートフォン
+   400px以下
+   ================================================== */
+
+@media (max-width: 400px) {
+
+    .container {
+        width: calc(100% - 12px);
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        border-radius: 12px;
+    }
+
+
+    header {
+        width: calc(100% - 12px);
+
+        top: 6px;
+
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+
+    #logo {
+        max-width: 130px;
+    }
+
+
+    nav ul {
+        gap: 4px;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem;
+        padding: 6px 2px;
+    }
+
+
+    nav p a {
+        font-size: 0.85rem;
+        padding: 9px 10px;
+    }
+
+
+    .container {
+        padding-top: 205px;
+    }
+
+
+    .main-visual {
+        min-height: 200px;
+    }
+
+
+    .capacity-label,
+    .capacity-unit {
+        font-size: 0.75rem;
+    }
+
+    .capacity-number {
+        font-size: 1.8rem;
+    }
+}
+/* ==================================================
+   ハンバーガーメニュー
+   ================================================== */
+
+/* PCではハンバーガーを表示しない */
+.menu-button {
+    display: none;
+}
+
+
+/* ==================================================
+   スマートフォン
+   ================================================== */
+
+@media (max-width: 600px) {
+
+    /* ------------------------------------------
+       ヘッダー
+       ------------------------------------------ */
+
+    header {
+        top: 10px;
+
+        width: calc(100% - 20px);
+
+        height: 70px;
+        min-height: 70px;
+
+        padding: 8px 15px;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        border-radius: 16px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ------------------------------------------
+       ロゴ
+       ------------------------------------------ */
+
+    header h1 {
+        margin: 0;
+    }
+
+    #logo {
+        display: block;
+
+        width: auto;
+        max-width: 140px;
+        max-height: 55px;
+
+        margin: 0;
+    }
+
+
+    /* ------------------------------------------
+       ハンバーガーボタン
+       ------------------------------------------ */
+
+    .menu-button {
+        display: flex;
+
+        width: 46px;
+        height: 46px;
+
+        padding: 10px;
+
+        margin: 0;
+
+        border: none;
+        border-radius: 8px;
+
+        background: transparent;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+
+        cursor: pointer;
+
+        z-index: 1002;
+    }
+
+
+    .menu-button span {
+        display: block;
+
+        width: 25px;
+        height: 2px;
+
+        background-color: var(--Portfolio-Green);
+
+        border-radius: 2px;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+
+    /* ------------------------------------------
+       開いたときの「×」
+       ------------------------------------------ */
+
+    header.menu-open .menu-button span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    header.menu-open .menu-button span:nth-child(2) {
+        opacity: 0;
+    }
+
+    header.menu-open .menu-button span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* ------------------------------------------
+       ナビゲーション
+       ------------------------------------------ */
+
+    nav {
+        position: absolute;
+
+        top: calc(100% + 10px);
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 15px;
+
+        background-color: rgba(255, 255, 255, 0.96);
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.1);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        /* 最初は非表示 */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease,
+            visibility 0.25s ease;
+
+        z-index: 1001;
+    }
+
+
+    /* ------------------------------------------
+       メニューを開いた状態
+       ------------------------------------------ */
+
+    header.menu-open nav {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /* ------------------------------------------
+       ナビゲーション項目
+       ------------------------------------------ */
+
+    nav ul {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    nav ul li {
+        width: 100%;
+    }
+
+
+    nav ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 13px 10px;
+
+        box-sizing: border-box;
+
+        border-bottom: 1px solid rgba(41, 106, 101, 0.12);
+
+        font-size: 0.95rem;
+
+        white-space: normal;
+
+        text-align: left;
+    }
+
+
+    /* 最後の項目の線を消す */
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+
+    /* ------------------------------------------
+       参加申し込み
+       ------------------------------------------ */
+
+    nav p {
+        width: 100%;
+
+        margin: 0;
+
+        text-align: center;
+    }
+
+
+    nav p a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 15px;
+
+        box-sizing: border-box;
+
+        border-radius: 6px;
+
+        background-color: var(--Portfolio-Green);
+
+        color: var(--Portfolio-White);
+
+        font-size: 0.95rem;
+
+        text-align: center;
+    }
+}

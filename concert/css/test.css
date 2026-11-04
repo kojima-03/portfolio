@@ -1,0 +1,172 @@
+/* 全体背景（画面全面） */
+body {
+  margin: 0;
+  padding: 40px 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333333; /* 文字をはっきり見せるためのダークグレー */
+
+  /* 温かみのある緑・黄色・白のグラデーション背景 */
+  background: linear-gradient(
+    135deg,
+    #d4e7b8 0%,    /* 優しく温かみのある黄緑 */
+    #fff9d6 45%,   /* やわらかなクリームイエロー */
+    #ffffff 70%,   /* 明るいホワイト */
+    #cbe3aa 100%   /* 全体を締めるライトグリーン */
+  );
+  background-attachment: fixed; /* スクロールしても背景を固定 */
+}
+
+/* コンテンツ表示エリア（中央配置・浮遊感） */
+.main-container {
+  /* 幅設定 */
+  max-width: 1440px;
+  width: 92%; /* 画面幅が狭い場合でも余白を確保 */
+  margin: 0 auto;
+
+  /* 白透過背景（文字をはっきりと目立たせる設定） */
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px); /* 背景を柔らかくぼかして透明感を演出 */
+
+  /* 角丸設定 */
+  border-radius: 24px;
+
+  /* 浮き上がる立体感のある影 */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08),
+              0 6px 12px rgba(0, 0, 0, 0.04);
+
+  /* 内側の余白 */
+  padding: 40px;
+  box-sizing: border-box;
+
+  /* 枠線を少し入れて高級感をプラス */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+
+
+
+
+
+/* --------------------------------------------------
+   メイン設定 (.container & header)
+-------------------------------------------------- */
+.container {
+    /* 幅設定 */
+    max-width: 1440px;
+    width: 92%;
+    /* 上部に固定ヘッダー（90px＋余白）のスペースを確保 */
+    margin: 110px auto 40px auto;
+
+    /* 白透過背景（背景のグラデーションがほんのり透ける設定） */
+    background-color: rgba(255, 255, 255, 0.75); /* 不透明度を0.88→0.75に調整して透過感を強調 */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari対応 */
+
+    /* 角丸設定 */
+    border-radius: 24px;
+
+    /* 浮き上がる立体感のある影 */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08),
+                0 6px 12px rgba(0, 0, 0, 0.04);
+
+    /* 内側の余白 */
+    padding: 40px;
+    box-sizing: border-box;
+
+    /* 枠線を少し入れて浮遊感とガラス感をプラス */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    overflow: hidden; /* 内側の画像が角丸からはみ出るのを防ぐ */
+}
+
+/* 固定ヘッダー（画面全体に対して固定） */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
+    /* ヘッダー自体もほんのりすりガラス風に設定 */
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    height: 90px;
+    padding-inline: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* うっすら境界線を追加 */
+}
+
+/* メインビジュアルのmargin-topを解除（container側で余白を取るため） */
+.main-visual {
+    background: url(../images/main-photo.png) no-repeat center center;
+    height: 768px;
+    width: 100%;
+    background-size: cover;
+    margin-top: 0; /* 90pxから0に変更 */
+    border-radius: 16px; /* 内側の画像も角丸になじませる場合 */
+}
+
+
+
+
+
+------------------------------------
+.container {
+    /* 幅設定 */
+  max-width: 1440px;
+  width: 92%; /* 画面幅が狭い場合でも余白を確保 */
+  margin: 0 auto;
+
+  /* 白透過背景（文字をはっきりと目立たせる設定） */
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px); /* 背景を柔らかくぼかして透明感を演出 */
+
+  /* 角丸設定 */
+  border-radius: 24px;
+
+  /* 浮き上がる立体感のある影 */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08),
+              0 6px 12px rgba(0, 0, 0, 0.04);
+
+  /* 内側の余白 */
+  padding: 40px;
+  box-sizing: border-box;
+
+  /* 枠線を少し入れて高級感をプラス */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* メインビジュアルの下に隠れないように追加 */
+    background-color: rgba(255, 255, 255, 0.9); /* 必要に応じて背景を白っぽく透過 */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    height: 90px;
+    padding-inline: 40px; /* 左右に少し余白を作ると綺麗に見えます */
+    box-sizing: border-box;
+}
+
+
+.main-visual {
+    background: url(../images/main-photo.png)no-repeat center center;
+     height: 768px;
+     width: 100%;
+     background-size: cover contain;
+     margin-top: 90px;
+}
